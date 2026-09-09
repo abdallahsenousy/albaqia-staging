@@ -280,7 +280,41 @@ if (
     ======================================== */
 
 
+/* ========================================
+   استكمال بيانات الطلب - الدفع اليدوي
+======================================== */
 
+else if (
+  params.get(
+    "action"
+  ) === "manual_complete_order"
+) {
+
+  const order =
+    params.get(
+      "order"
+    );
+
+
+  appUrl +=
+    "?action=manual_complete_order";
+
+
+  if (order) {
+
+    appUrl +=
+      "&order=" +
+      encodeURIComponent(
+        order
+      );
+
+  }
+
+
+  document.title =
+    "استكمال بيانات الطلب | الباقية";
+
+}
 
     /* ========================================
        صفحات المتوفين / Landing
