@@ -95,12 +95,16 @@ const APPS_SCRIPT_URL =
        قراءة الرابط
     ======================================== */
 
-    const path =
-      window.location.pathname
-        .replace(
-          /^\/+|\/+$/g,
-          ""
-        );
+const path =
+  window.location.pathname
+    .replace(
+      /^\/albaqia-staging\/?/i,
+      "/"
+    )
+    .replace(
+      /^\/+|\/+$/g,
+      ""
+    );
 
 
     const params =
