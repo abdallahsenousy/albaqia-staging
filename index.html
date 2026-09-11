@@ -320,13 +320,27 @@ else if (
        صفحات المتوفين / Landing
     ======================================== */
 
-    else {
+else {
 
-      const page =
-        path ||
-        params.get(
-          "page"
-        );
+  if (pendingOrderId) {
+
+    appUrl +=
+      "?action=easykash_return" +
+      "&order=" +
+      encodeURIComponent(
+        pendingOrderId
+      );
+
+    document.title =
+      "تأكيد الدفع | الباقية";
+
+  } else {
+
+    const page =
+      path ||
+      params.get(
+        "page"
+      );
 
 
       if (page) {
@@ -337,15 +351,16 @@ else if (
             page
           );
 
-      }
+        }
 
     }
+
+  }
 
 
     /* ========================================
        تشغيل تطبيق الباقية
     ======================================== */
-
     document
       .getElementById(
         "albaqiaApp"
