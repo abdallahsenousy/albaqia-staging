@@ -322,8 +322,10 @@ else if (
 
 else {
 
-  if (pendingOrderId) {
-
+if (
+  pendingOrderId &&
+  !params.get("payment")
+) {
     appUrl +=
       "?action=easykash_return" +
       "&order=" +
