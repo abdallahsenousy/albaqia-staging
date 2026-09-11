@@ -47,26 +47,7 @@
     }
 
 
-    #debugOrder {
-      position: fixed;
 
-      bottom: 10px;
-      left: 10px;
-
-      z-index: 999999;
-
-      background: #ffffff;
-
-      padding: 10px;
-
-      border: 1px solid #cccccc;
-
-      border-radius: 6px;
-
-      font-size: 12px;
-
-      direction: ltr;
-    }
 
   </style>
 
@@ -427,33 +408,7 @@ if (
 
   }
 );
-    /* ========================================
-       Debug مؤقت
-    ======================================== */
 
-    function updateDebugOrder() {
-
-      const debug =
-        document.getElementById(
-          "debugOrder"
-        );
-
-
-      if (!debug) {
-        return;
-      }
-
-
-      debug.textContent =
-        "Pending: " +
-        (
-          localStorage.getItem(
-            "albaqiaPendingOrder"
-          ) ||
-          "null"
-        );
-
-    }
 
 window.addEventListener(
   "pageshow",
@@ -467,7 +422,6 @@ window.addEventListener(
 
   }
 );
-    updateDebugOrder();
 
   </script>
 
