@@ -354,73 +354,7 @@ else if (
       appUrl;
 
 
-    /* ========================================
-       استقبال بدء الدفع من Landing
-    ======================================== */
-
-    window.addEventListener(
-      "message",
-      function(event) {
-
-        if (
-          !event.data ||
-          event.data.type !==
-            "ALBAQIA_PAYMENT_STARTED"
-        ) {
-          return;
-        }
-
-
-        const orderId =
-          String(
-            event.data.orderId || ""
-          ).trim();
-
-
-        const paymentUrl =
-          String(
-            event.data.paymentUrl || ""
-          ).trim();
-
-
-        if (
-          !orderId ||
-          !paymentUrl
-        ) {
-          return;
-        }
-
-
-        /* حفظ الطلب على albaqia.com */
-
-        localStorage.setItem(
-          "albaqiaPendingOrder",
-          orderId
-        );
-
-
-        /* تحديث مربع الاختبار */
-
-        updateDebugOrder();
-
-
-        /* التحويل من الدومين نفسه إلى EasyKash */
-
-        history.replaceState(
-  {},
-  "",
-  "/?action=easykash_return" +
-  "&order=" +
-  encodeURIComponent(
-    orderId
-  )
-);
-        
-        window.location.href =
-          paymentUrl;
-
-      }
-    );
+  
 
 window.addEventListener(
   "message",
