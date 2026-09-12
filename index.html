@@ -69,7 +69,7 @@
   <script>
 
 const APPS_SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbybCuAPp9dx_jrnkycNz3CJN-PLxtrVWSexINQx4y0W-mPp2gf6I3bvCWR8HZtrbZLYqw/exec";
+  "https://script.google.com/macros/s/AKfycbzUSf-7s34cW5L0cFliTOOlVgjj2wnmWWhwvdJAK-xiRRIwrKvuswKzH1bpbEfM4BpLkg/exec";
 
     /* ========================================
        قراءة الرابط
@@ -77,10 +77,6 @@ const APPS_SCRIPT_URL =
 
 const path =
   window.location.pathname
-    .replace(
-      /^\/albaqia-staging\/?/i,
-      "/"
-    )
     .replace(
       /^\/+|\/+$/g,
       ""
@@ -387,10 +383,10 @@ window.addEventListener(
 
     }
 
- if (
+if (
   targetUrl &&
   targetUrl.startsWith(
-    "https://abdallahsenousy.github.io/albaqia-staging/"
+    "https://albaqia.com/"
   )
 ) {
 
