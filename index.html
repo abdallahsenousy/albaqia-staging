@@ -387,13 +387,18 @@ window.addEventListener(
 
     }
 
-    if (targetUrl) {
+ if (
+  targetUrl &&
+  targetUrl.startsWith(
+    "https://abdallahsenousy.github.io/albaqia-staging/"
+  )
+) {
 
-      window.location.replace(
-        targetUrl
-      );
+  window.location.replace(
+    targetUrl
+  );
 
-    }
+}
 
   }
 );
