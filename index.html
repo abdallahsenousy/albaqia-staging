@@ -357,18 +357,7 @@ if (
 window.addEventListener(
   "message",
   function(event) {
-const appFrame =
-  document.getElementById(
-    "albaqiaApp"
-  );
 
-if (
-  !appFrame ||
-  event.source !==
-    appFrame.contentWindow
-) {
-  return;
-}
     if (
       !event.data ||
       event.data.type !==
